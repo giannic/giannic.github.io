@@ -1,0 +1,12 @@
+- name: home
+  link: /
+- name: info
+  link: /info
+- name: projects
+  link: /projects
+- name: art
+  link: /art
+- name: courses
+  link: /courses
+- name: profiles
+  link: /profiles

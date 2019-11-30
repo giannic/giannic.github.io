@@ -1,0 +1,210 @@
+
+// Typefaces
+@import url(http://fonts.googleapis.com/css?family=Unna:400|Open+Sans:400,300);
+
+// Variables
+$type-serif: "Unna", Georgia, serif;
+$type-sans-serif: "Open Sans", Helvetica, sans-serif;
+
+$type-size-h1: 32px;
+$type-size-h2: 12px;
+$type-size-h3: 16px;
+$type-size-h4: 13px;
+$type-size-h5: 11px;
+$type-size-h6: 10px;
+$type-size-p: 16px;
+
+// Global
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+/*.............................................................html-framework*/
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: inherit;
+    width: inherit;
+}
+
+nav {
+    position: absolute;
+    top: 102px;
+    left: -67px;
+    display: block;
+    height: auto;
+    width: auto;
+}
+
+footer {
+    position: absolute;
+    bottom: 5px;
+    left: -40px;
+    width: auto;
+}
+
+/*.............................................................page-framework*/
+.container {
+    position: relative;
+    height: auto;
+    width: 650px;
+    min-height: 100%;
+    margin: 0px auto;
+    box-shadow: -5px 0px 0px 0px #000000;
+    -webkit-box-shadow: -5px 0px 0px 0px #000000;
+    -moz-box-shadow: -5px 0px 0px 0px #000000;
+}
+
+.content {
+    height: auto;
+    width: auto;
+    margin: 0px 0px 0px 20px;
+    padding: 0px 0px 20px 0px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+.name-head {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    margin: 20px 0px 0px 20px;
+}
+
+nav a {
+    display: block;
+    font-family: $type-sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: 0.25px;
+    color: #888888;
+    text-align: right;
+    text-transform: lowercase;
+    text-decoration: none;
+
+    &:visited {
+        color: #888888;
+    }
+    &:hover {
+        color: #000000;
+    }
+}
+
+
+
+/*.......................................................................text*/
+.name {
+    display: block;
+    font-family: $type-serif;
+    color: #555555;
+    font-size: $type-size-h1;
+    font-weight: 100;
+    line-height: 31.5px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    -webkit-transition: color 0.2s ease-in;
+    -moz-transition: color 0.2s ease-in;
+    -o-transition: color 0.2s ease-in;
+    transition: color 0.2s ease-in;
+    &:hover {
+        color: #000000;
+    }
+}
+
+.section-title {
+    clear: both;
+    padding: 24.5px 0px 5px 0px;
+    font-family: $type-sans-serif;
+    font-size: $type-size-h2;
+    line-height: 17.5px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    a {
+        color: #000000;
+        &:visited {
+            color: #000000;
+        }
+        &:hover {
+            color: #333333;
+        }
+    }
+}
+
+.entry {
+    clear: both;
+    float: left;
+    font-family: $type-serif;
+    font-size: $type-size-p;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    color: #333333;
+
+    .bit {
+        font-size: $type-size-h4;
+        margin: 0px 0px 0px 10px;
+    }
+
+    a {
+        color: #666666;
+        &:visited {
+            color: #666666;
+        }
+        &:hover {
+            color: #111111;
+        }
+    }
+}
+
+.meta-info {
+    float: right;
+    margin: 6px 0px 0px 0px;
+    font-family: $type-sans-serif;
+    font-size: $type-size-h5;
+    line-height: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.copyright {
+    font-family: $type-sans-serif;
+    font-size: $type-size-h6;
+    font-weight: 100;
+    line-height: 10.5px;
+    text-align: center;
+}
+
+.lang {
+    color: #999999;
+    &:hover {
+        color: #000000;
+    }
+}
+
+.quote {
+    margin: 20px 0px 0px 0px;
+    font-family: $type-sans-serif;
+    font-size: $type-size-h3;
+    line-height: 24.5px;
+    color: #999999;
+    font-weight: 100;
+}
+
+.artwork {
+    clear: both;
+    display: block;
+    max-height: 600px;
+    margin: 20px auto 0px auto;
+    background-color: #000000;
+}
+
+.current {
+    color: green;
+}

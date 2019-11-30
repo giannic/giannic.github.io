@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Gianni Chen">
+    <meta name="description" content="Gianni, software engineer at Google.">
+    <meta name="keywords" content="Gianni Chen, Gianni, DMD, Digital Media Design, UPenn, University of Pennsylvania, Software Engineer, Programmer"/>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    {% if jekyll.environment == "production" %}
+    <meta name="google-site-verification"
+          content="C6_wOCVRZCOck1tRKN7tWxzKq0t2rBLxWFDEUMgrS5c"/>
+    <meta name="p:domain_verify" content="bfc9fbb599b3e78fa77875f50ae02ad1"/>
+    <script src="my-analytics-script.js"></script>
+    {% endif %}
+  </head>
+
+  <body>
+    <section class="container">
+      <header class="name-head">
+        <a class="name" href="/">Gianni Chen</a>
+      </header>
+      {% include nav.html %}
+      <section class="content">
+        <article>
+          {{ content }}
+        </article>
+      </section>
+      <footer>
+        <h6 class="copyright">2020</h6>
+      </footer>
+    </section>
+  </body>
+</html>
