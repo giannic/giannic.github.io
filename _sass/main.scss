@@ -13,6 +13,13 @@ $type-size-h5: 11px;
 $type-size-h6: 10px;
 $type-size-p: 16px;
 
+$screen-small: 800px;
+@mixin sm {
+   @media (max-width: #{$screen-small}) {
+       @content;
+   }
+}
+
 // Global
 * {
     margin: 0px;
@@ -33,11 +40,28 @@ body {
 
 nav {
     position: absolute;
-    top: 102px;
-    left: -67px;
-    display: block;
     height: auto;
     width: auto;
+}
+
+nav.desktop {
+    display: block;
+    top: 102px;
+    left: -67px;
+
+    @include sm {
+        display: none;
+    }
+}
+
+nav.mobile {
+    display: none;
+    bottom: 20px;
+    margin: 0px 0px 0px 20px;
+
+    @include sm {
+        display: block;
+    }
 }
 
 footer {
@@ -51,9 +75,11 @@ footer {
 .container {
     position: relative;
     height: auto;
-    width: 650px;
+    max-width: 650px;
     min-height: 100%;
     margin: 0px auto;
+
+    // Left black stripe
     box-shadow: -5px 0px 0px 0px #000000;
     -webkit-box-shadow: -5px 0px 0px 0px #000000;
     -moz-box-shadow: -5px 0px 0px 0px #000000;
@@ -76,14 +102,10 @@ footer {
 }
 
 nav a {
-    display: block;
     font-family: $type-sans-serif;
     font-size: 14px;
     font-weight: 300;
-    line-height: 21px;
-    letter-spacing: 0.25px;
     color: #888888;
-    text-align: right;
     text-transform: lowercase;
     text-decoration: none;
 
@@ -95,7 +117,16 @@ nav a {
     }
 }
 
+nav.desktop a {
+    display: block;
+    line-height: 21px;
+    letter-spacing: 0.25px;
+    text-align: right;
+}
 
+nav.mobile a {
+    margin: 0 10px 0 0;
+}
 
 /*.......................................................................text*/
 .name {
@@ -202,8 +233,4 @@ nav a {
     max-height: 600px;
     margin: 20px auto 0px auto;
     background-color: #000000;
-}
-
-.current {
-    color: green;
 }
